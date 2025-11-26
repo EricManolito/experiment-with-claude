@@ -35,10 +35,10 @@ export default function Header({ onMusicToggle }) {
             className="flex items-center space-x-2 group"
             onClick={closeMenu}
           >
-            <div className="text-2xl font-bold text-mk-red group-hover:text-mk-gold transition-colors duration-300 mk-glow-lg">
+            <div className="text-4xl font-bold text-mk-red group-hover:text-mk-gold transition-colors duration-300 mk-glow-lg">
               MK
             </div>
-            <div className="hidden sm:block text-lg font-bold text-mk-gold">
+            <div className="hidden sm:block text-2xl font-bold text-mk-gold">
               KOMBAT
             </div>
           </Link>
@@ -49,7 +49,7 @@ export default function Header({ onMusicToggle }) {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-white font-semibold hover:text-mk-gold transition-colors duration-300 hover:mk-glow-lg relative group"
+                className="text-xl font-semibold text-white hover:text-mk-gold transition-colors duration-300 hover:mk-glow-lg relative group"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-mk-red group-hover:w-full transition-all duration-300"></span>
@@ -101,7 +101,7 @@ export default function Header({ onMusicToggle }) {
               <Link
                 key={link.path}
                 to={link.path}
-                className="block py-2 px-4 text-white font-semibold hover:bg-mk-red hover:text-black transition-colors duration-300 rounded"
+                className="block py-3 px-4 text-lg font-semibold text-white hover:bg-mk-red hover:text-black transition-colors duration-300 rounded"
                 onClick={closeMenu}
               >
                 {link.name}
@@ -112,7 +112,7 @@ export default function Header({ onMusicToggle }) {
                 handleMusicToggle()
                 closeMenu()
               }}
-              className="w-full mt-4 py-2 px-4 bg-mk-red hover:bg-mk-gold text-black font-bold rounded transition-colors duration-300 flex items-center justify-center space-x-2"
+              className="w-full mt-4 py-3 px-4 bg-mk-red hover:bg-mk-gold text-black font-bold text-lg rounded transition-colors duration-300 flex items-center justify-center space-x-2"
             >
               <span>{isMusicPlaying ? '🔊' : '🔇'}</span>
               <span>{isMusicPlaying ? 'Mute Music' : 'Play Music'}</span>

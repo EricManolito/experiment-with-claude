@@ -36,19 +36,19 @@ export default function CharacterCard({ character }) {
 
           {/* Info */}
           <div>
-            <h3 className="text-2xl font-bold text-mk-gold mb-1">
+            <h3 className="text-3xl font-bold text-mk-gold mb-2">
               {character.name}
             </h3>
-            <p className="text-mk-red font-semibold italic mb-2">
+            <p className="text-mk-red font-semibold italic mb-3 text-lg">
               "{character.tagline}"
             </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-base">
               Realm: <span className="text-mk-gold">{character.realm}</span>
             </p>
           </div>
 
           {/* Click hint */}
-          <p className="text-xs text-gray-500 mt-2 text-center group-hover:text-mk-gold transition-colors">
+          <p className="text-sm text-gray-500 mt-3 text-center group-hover:text-mk-gold transition-colors">
             Click for more details
           </p>
         </div>
@@ -63,14 +63,14 @@ export default function CharacterCard({ character }) {
         >
           {/* Backstory */}
           <div className="flex-1 overflow-y-auto mb-4">
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+            <p className="text-gray-300 text-base leading-relaxed mb-4">
               {character.backstory}
             </p>
 
             {/* Signature Moves */}
             <div className="mb-4">
-              <h4 className="text-mk-red font-bold mb-2">Signature Moves:</h4>
-              <ul className="text-sm text-gray-400 space-y-1">
+              <h4 className="text-mk-red font-bold mb-2 text-lg">Signature Moves:</h4>
+              <ul className="text-base text-gray-400 space-y-1">
                 {character.signatureMoves.map((move, idx) => (
                   <li key={idx}>• {move}</li>
                 ))}
@@ -79,8 +79,8 @@ export default function CharacterCard({ character }) {
 
             {/* Fatalities */}
             <div>
-              <h4 className="text-mk-gold font-bold mb-2">Fatalities:</h4>
-              <ul className="text-sm text-gray-400 space-y-1">
+              <h4 className="text-mk-gold font-bold mb-2 text-lg">Fatalities:</h4>
+              <ul className="text-base text-gray-400 space-y-1">
                 {character.fatalities.map((fatality, idx) => (
                   <li key={idx}>💀 {fatality}</li>
                 ))}

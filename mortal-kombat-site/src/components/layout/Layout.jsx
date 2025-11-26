@@ -8,9 +8,20 @@ export default function Layout({ children }) {
 
   // Initialize audio on mount
   useEffect(() => {
-    const audioElement = new Audio('/audio/mk-theme.mp3')
+    // Try local file first, fallback to external source
+    const audioElement = new Audio()
     audioElement.loop = true
     audioElement.volume = 0.3
+
+    // Try local file first
+    audioElement.src = '/audio/mk-theme.mp3'
+
+    // Fallback: Use a free audio source if local file fails
+    audioElement.addEventListener('error', () => {
+      console.log('Local audio not found, using placeholder')
+      audioElement.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+    }, { once: true })
+
     setAudio(audioElement)
 
     // Load preference from localStorage
