@@ -5,7 +5,7 @@ export default function CharacterCard({ character }) {
 
   return (
     <div
-      className="h-full cursor-pointer perspective"
+      className="h-96 cursor-pointer perspective"
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <div
