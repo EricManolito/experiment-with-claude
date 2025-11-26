@@ -25,8 +25,19 @@ export default function TimelineView() {
   }, [])
 
   return (
-    <section className="min-h-screen py-16 px-4 bg-mk-black pt-32">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative min-h-screen py-16 px-4 pt-32 overflow-hidden">
+      {/* Background with MK fighting scene */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-15 pointer-events-none"
+        style={{
+          backgroundImage: 'url(https://images.wikia.nocookie.net/mortalkombat/images/1/18/MK11_Arena_Netherrealm.jpg)',
+        }}
+      ></div>
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-mk-black via-mk-black/80 to-mk-black pointer-events-none"></div>
+
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-black mb-4">
