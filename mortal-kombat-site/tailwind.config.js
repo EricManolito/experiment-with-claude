@@ -10,10 +10,10 @@ export default {
         mk: {
           red: '#D91414',
           gold: '#FFD700',
-          black: '#000000',
+          black: '#1a1a2e',
           yellow: '#FFEB3B',
-          darkGray: '#1a1a1a',
-          charcoal: '#2a2a2a',
+          darkGray: '#16213e',
+          charcoal: '#0f3460',
         },
       },
       fontFamily: {
